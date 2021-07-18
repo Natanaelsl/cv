@@ -135,11 +135,11 @@ print_text_block(text_blocks, 'intro')
 
 
 
-Education {data-icon=graduation-cap data-concise=true}
+Educação {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('education')
+position_data %>% print_section('educação')
 ```
 
 

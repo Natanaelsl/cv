@@ -54,13 +54,13 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _https://natanaelsl.netlify.app/media/_")
+  cat("Veja este CV online com o link _https://natanaelsl.netlify.app/media/_")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/Natanaelsl/cv/raw/master/natanael_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download o PDF deste CV](https://github.com/Natanaelsl/cv/raw/master/natanael_cv.pdf)")
 }
 ```
 
-Contact {#contact}
+Contatos {#contact}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -81,11 +81,11 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+Construído com o R *package* [**pagedown**](https://github.com/rstudio/pagedown). 
 
-The source code is available [on github.com/nstrayer/cv](https://github.com/Natanaelsl/cv).
+O código está disponível em [github.com/nstrayer/cv](https://github.com/Natanaelsl/cv).
 
-Last updated on `r Sys.Date()`.
+Última atualização em `r Sys.Date()`.
 
 
 
@@ -102,11 +102,19 @@ CV %<>% print_text_block("intro")
 
 
 
-Education {data-icon=graduation-cap data-concise=true}
+Educação {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('education')
+CV %<>% print_section('educação')
+```
+
+
+Experiência Profissional {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('experiência')
 ```
 
 
