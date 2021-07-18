@@ -83,9 +83,9 @@ Disclaimer {#disclaimer}
 
 Construído com o R *package* [**pagedown**](https://github.com/rstudio/pagedown). 
 
-O código está disponível em [github.com/nstrayer/cv](https://github.com/Natanaelsl/cv).
+O código está disponível em [**github.com/nstrayer/cv**](https://github.com/Natanaelsl/cv).
 
-Última atualização em `r Sys.Date()`.
+Atualizado em `r Sys.Date()`.
 
 
 
