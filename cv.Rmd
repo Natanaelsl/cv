@@ -1,5 +1,5 @@
 ---
-title: "Natanael Soares Leite's CV"
+title: "Natanael's CV"
 author: Natanael Soares Leite
 date: "`r Sys.Date()`"
 params:
@@ -10,6 +10,16 @@ output:
     css: ['dd_cv.css', 'resume']
     self_contained: true
 ---
+
+<!-- inicio academic icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<!-- final academic icons -->
+
+ 
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+<!-- final font awesome -->
+
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
@@ -44,21 +54,36 @@ if(params$pdf_mode) {
 
 Aside
 ================================================================================
-
+<!---
 ```{r}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
 datadrivencv::build_network_logo(CV$entries_data)
 ```
+-->
+
+
+<center>
+
+![foto](imagens/Foto_lattes.jpg)
+
+</center>
 
 
 ```{r}
 if(params$pdf_mode){
-  cat("Veja este CV online com o link _https://natanaelsl.netlify.app/media/_")
+  cat("Currículo online em: _https://natanaelsl.netlify.app/media/_")
 } else {
   cat("[<i class='fas fa-download'></i> Download o PDF deste CV](https://github.com/Natanaelsl/cv/raw/master/natanael_cv.pdf)")
 }
 ```
+
+<!---
+```{r}
+# Note the special double pipe so we modify the CV object in place
+CV %<>% print_text_block("intro") 
+```
+-->
 
 Contatos {#contact}
 --------------------------------------------------------------------------------
@@ -69,23 +94,14 @@ CV %>% print_contact_info()
 
 
 
-Language Skills {#skills}
---------------------------------------------------------------------------------
-
-```{r}
-CV %>% print_skill_bars()
-```
-
-
-
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 Construído com o R *package* [**pagedown**](https://github.com/rstudio/pagedown). 
 
-O código está disponível em [**github.com/nstrayer/cv**](https://github.com/Natanaelsl/cv).
+O código está disponível em [**github.com/Natanaelsl/cv**](https://github.com/Natanaelsl/cv).
 
-Atualizado em `r Sys.Date()`.
+Atualizado em `r format(Sys.Date(), "%d-%m-%Y")`.
 
 
 
@@ -94,12 +110,6 @@ Main
 
 Natanael Soares Leite {#title}
 --------------------------------------------------------------------------------
-
-```{r}
-# Note the special double pipe so we modify the CV object in place
-CV %<>% print_text_block("intro") 
-```
-
 
 
 Educação {data-icon=graduation-cap data-concise=true}
@@ -118,8 +128,15 @@ CV %<>% print_section('experiência')
 ```
 
 
+Publicações {data-icon=book }
+--------------------------------------------------------------------------------
 
+```{r}
+CV %<>% print_section('publicações')
+```
+
+<!---
 ```{r}
 CV %<>% print_links()
 ```
-
+-->
