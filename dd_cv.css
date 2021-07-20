@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap");
 
+
+@page  {
+  @bottom-right {
+    content: counter(page) ' de ' counter(pages);
+    font-size: 8pt;
+    font-style: italic;
+  }
+}
+
+
 /* Mudar os parâmetros da foto */
 img[alt=foto] {
   width: 70%;
@@ -44,7 +54,7 @@ sup {
 
 /* Customize some of the sizing variables */
 :root {
-  --sidebar-width: 12rem; /* Shrink sidebar width  */
+  --sidebar-width: 12rem; /* Shrink sidebar width */
   --sidebar-background-color: #f7fbff; /* Make sidebar blue */
   --sidebar-horizontal-padding: 0.01in; /* Reduce sidebar padding */
   --decorator-outer-dim: 10px; /* Make position deliniating circles larger */
