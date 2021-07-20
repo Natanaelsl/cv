@@ -12,7 +12,7 @@ output:
 ---
 
 <!-- inicio academic icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="C:/Users/natan/Documents/GitHub/cv/icons/academicons-1.9.1/css/academicons.min.css"/>
 <!-- final academic icons -->
 
  
@@ -135,8 +135,8 @@ Publicações {data-icon=book }
 CV %<>% print_section('publicações')
 ```
 
-<!---
+
 ```{r}
 CV %<>% print_links()
 ```
--->
+
