@@ -8,8 +8,11 @@ params:
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
+    in_header: header.html
     self_contained: true
 ---
+
+<link rel="shortcut icon" href="C:/Users/natan/Documents/GitHub/cv/imagens/icon.png"/>
 
 <!-- inicio academic icons -->
 <link rel="stylesheet" href="C:/Users/natan/Documents/GitHub/cv/icons/academicons-1.9.1/css/academicons.min.css"/>
