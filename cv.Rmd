@@ -75,7 +75,7 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("Currículo online em: https://natanaelsl.netlify.app/media/natanael_cv.pdf")
+  cat("Currículo online em: https://natanaelsl.com.br/uploads/natanael_cv.html")
 } else {
   cat("[<i class='fas fa-download'></i> Download o PDF deste CV](https://github.com/Natanaelsl/cv/raw/master/natanael_cv.pdf)")
 }
