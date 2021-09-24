@@ -4,6 +4,6 @@
 
 Este currículo (CV) foi feito com R, RStudio e o pacote R pagedown.
 
-PDF - https://natanaelsl.netlify.app/media/natanael_cv.pdf
+PDF - https://natanaelsl.com.br/uploads/natanael_cv.html
 
 @Nick Strayer - Responsável pela criação do código para construir o CV usando uma tabela csv.
