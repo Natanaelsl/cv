@@ -86,7 +86,7 @@ sup {
 
 /* Move closer to start and up towards header */
 .aside ul {
-  padding-left: 1rem;
+  padding-left: 0rem;
 }
 
 .aside li::before {
@@ -99,7 +99,7 @@ sup {
 .aside {
   width: calc(var(--sidebar-width) + 9px);
   line-height: 1.2;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 /* Make little circle outline be a light blue */
