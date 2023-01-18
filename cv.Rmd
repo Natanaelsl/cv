@@ -1,5 +1,5 @@
 ---
-title: "Natanael's CV"
+title: "Natanael Soares Leite's CV"
 author: Natanael Soares Leite
 date: "`r Sys.Date()`"
 params:
@@ -8,21 +8,8 @@ params:
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
-    in_header: header.html
     self_contained: true
 ---
-
-<link rel="shortcut icon" href="C:/Users/natan/Documents/GitHub/cv/imagens/icon.png"/>
-
-<!-- inicio academic icons -->
-<link rel="stylesheet" href="C:/Users/natan/Documents/GitHub/cv/icons/academicons-1.9.1/css/academicons.min.css"/>
-<!-- final academic icons -->
-
- 
-<!-- inicio font awesome -->
-<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
-<!-- final font awesome -->
-
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
@@ -57,38 +44,23 @@ if(params$pdf_mode) {
 
 Aside
 ================================================================================
-<!---
+
 ```{r}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
 datadrivencv::build_network_logo(CV$entries_data)
 ```
--->
-
-
-<center>
-
-![foto](imagens/Foto_lattes.jpg)
-
-</center>
 
 
 ```{r}
 if(params$pdf_mode){
-  cat("Currículo online em: https://natanaelsl.com.br/uploads/natanael_cv.html")
+  cat("View this CV online with links at _https://natanaelsl.com.br/uploads/_")
 } else {
-  cat("[<i class='fas fa-download'></i> Download o PDF deste CV](https://github.com/Natanaelsl/cv/raw/master/natanael_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/Natanaelsl/cv/raw/master/natanael_cv.pdf)")
 }
 ```
 
-<!---
-```{r}
-# Note the special double pipe so we modify the CV object in place
-CV %<>% print_text_block("intro") 
-```
--->
-
-Contatos {#contact}
+Contact {#contact}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -97,14 +69,23 @@ CV %>% print_contact_info()
 
 
 
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_skill_bars()
+```
+
+
+
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Construído com o R *package* [**pagedown**](https://github.com/rstudio/pagedown). 
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
 
-O código está disponível em [**github.com/Natanaelsl/cv**](https://github.com/Natanaelsl/cv).
+The source code is available [on github.com/nstrayer/cv](https://github.com/Natanaelsl/cv).
 
-Atualizado em `r format(Sys.Date(), "%d-%m-%Y")`.
+Last updated on `r Sys.Date()`.
 
 
 
@@ -114,29 +95,107 @@ Main
 Natanael Soares Leite {#title}
 --------------------------------------------------------------------------------
 
-
-Educação {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
 ```{r}
-CV %<>% print_section('educação')
+# Note the special double pipe so we modify the CV object in place
+CV %<>% print_text_block("intro") 
 ```
 
 
-Experiência Profissional {data-icon=chalkboard-teacher}
+
+Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('experiência')
+CV %<>% print_section('education')
 ```
 
 
-Publicações {data-icon=book }
+
+Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('publicações')
+CV %<>% print_section('research_positions')
 ```
+
+
+
+Industry Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV %<>% print_text_block('industy_experience_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('industry_positions')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV %<>% print_text_block('teaching_experience_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('teaching_positions')
+```
+
+
+
+Selected Data Science Writing {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV %<>% print_text_block('data_science_writing_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('data_science_writings')
+```
+
+
+
+Selected Press (About)  {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('about_me_press')
+```
+
+
+<br>
+<br>
+
+
+Selected Press (By)  {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('by_me_press')
+```
+
+
+
+Selected Publications, Posters, and Talks {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('academic_articles')
+```
+
 
 
 ```{r}

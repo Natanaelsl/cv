@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap");
 
-
-@page  {
-  @bottom-right {
-    content: counter(page) ' de ' counter(pages);
-    font-size: 8pt;
-    font-style: italic;
-  }
-}
-
-
-/* Mudar os parâmetros da foto */
-img[alt=foto] {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  image-resolution: from-image 300dpi;
-}
-
-
 /* Main text is monserrat*/
 body {
   font-family: "Montserrat", sans-serif;
@@ -54,7 +35,7 @@ sup {
 
 /* Customize some of the sizing variables */
 :root {
-  --sidebar-width: 12rem; /* Shrink sidebar width */
+  --sidebar-width: 12rem; /* Shrink sidebar width  */
   --sidebar-background-color: #f7fbff; /* Make sidebar blue */
   --sidebar-horizontal-padding: 0.01in; /* Reduce sidebar padding */
   --decorator-outer-dim: 10px; /* Make position deliniating circles larger */
@@ -86,7 +67,7 @@ sup {
 
 /* Move closer to start and up towards header */
 .aside ul {
-  padding-left: 0rem;
+  padding-left: 1rem;
 }
 
 .aside li::before {
@@ -99,7 +80,7 @@ sup {
 .aside {
   width: calc(var(--sidebar-width) + 9px);
   line-height: 1.2;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 /* Make little circle outline be a light blue */

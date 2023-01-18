@@ -1,3 +1,6 @@
+# remotes::install_github('mitchelloharawild/icons@v0.1.0')
+# devtools::install_github('nstrayer/datadrivencv')
+
 library(datadrivencv)
 library(here)
 use_datadriven_cv(
